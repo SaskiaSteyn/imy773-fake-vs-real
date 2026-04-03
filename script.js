@@ -1,4 +1,36 @@
 
+// Prevent developer tools and right-click inspection
+document.addEventListener('contextmenu', (e) => {
+    e.preventDefault()
+})
+
+document.addEventListener('keydown', (e) => {
+    // F12
+    if (e.key === 'F12') {
+        e.preventDefault()
+    }
+    // Ctrl+Shift+I (Windows/Linux Inspector)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault()
+    }
+    // Ctrl+Shift+C (Windows/Linux Inspect Element)
+    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+        e.preventDefault()
+    }
+    // Ctrl+Shift+J (Windows/Linux Console)
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+        e.preventDefault()
+    }
+    // Cmd+Option+I (Mac Inspector)
+    if (e.metaKey && e.altKey && e.key === 'i') {
+        e.preventDefault()
+    }
+    // Cmd+Option+U (Mac View Source)
+    if (e.metaKey && e.altKey && e.key === 'u') {
+        e.preventDefault()
+    }
+})
+
 // Password validation with OTP
 const CORRECT_PASSWORD = '952690'
 const otpInputs = document.querySelectorAll('.otp-input')
