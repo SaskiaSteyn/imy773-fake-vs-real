@@ -124,6 +124,7 @@ const correct = []
 const incorrect = []
 
 // Populate the correct buckets with file paths to each image in the Instagram/Hers folder
+correct.push('./instagram/her-insta/0-beach.png')
 correct.push('./instagram/her-insta/1-half-marathon.png')
 correct.push('./instagram/her-insta/2-night-club.png')
 correct.push('./instagram/her-insta/3-lunch.png')
@@ -137,6 +138,7 @@ correct.push('./instagram/her-insta/10-flower-picking.png')
 correct.push('./instagram/her-insta/11-new-car.png')
 
 // Populate the incorrect buckets with file paths to each image in the Instagram/Him folder
+incorrect.push('./instagram/his-insta/0-beach.png')
 incorrect.push('./instagram/his-insta/1-half-marathon.png')
 incorrect.push('./instagram/his-insta/2-night-club.png')
 incorrect.push('./instagram/his-insta/3-lunch.png')
