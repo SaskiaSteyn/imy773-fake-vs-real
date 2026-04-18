@@ -316,6 +316,28 @@ function revealDigit(digitElement) {
     digitElement.style.visibility = 'visible'
 }
 
+// Reset all circles to empty state
+function resetCircles() {
+    for (let i = 1; i <= 9; i++) {
+        const circle = document.getElementById(`circle${i}`)
+        const fillDiv = circle.querySelector('.c-fill')
+        const iconDiv = circle.querySelector('.c-icon')
+        const dotDiv = circle.querySelector('.c-dot')
+
+        fillDiv.classList.remove('active')
+        iconDiv.innerHTML = ''
+        dotDiv.style.display = 'block'
+    }
+
+    // Hide revealed digits
+    digit1.style.visibility = 'hidden'
+    digit1.classList.remove('revealed')
+    digit2.style.visibility = 'hidden'
+    digit2.classList.remove('revealed')
+    digit3.style.visibility = 'hidden'
+    digit3.classList.remove('revealed')
+}
+
 // Create click functions for each image
 function handleAnswer(isLeft) {
     if (isLeft) {
@@ -340,16 +362,16 @@ function clickLeft() {
         }
         checkDigits()
     } else {
-        // Wrong answer - shake the image and show hint
+        // Wrong answer - restart the puzzle
         img1.classList.add('wrong-shake')
         document.getElementById('hint').classList.add('show')
         setTimeout(() => {
             img1.classList.remove('wrong-shake')
-            if (correctCount < 9) {
-                updateImages()
-            }
-            checkDigits()
-        }, 700)
+            correctCount = 0
+            resetCircles()
+            updateImages()
+            document.getElementById('hint').classList.remove('show')
+        }, 1500)
     }
 }
 
@@ -367,16 +389,16 @@ function clickRight() {
         }
         checkDigits()
     } else {
-        // Wrong answer - shake the image and show hint
+        // Wrong answer - restart the puzzle
         img2.classList.add('wrong-shake')
         document.getElementById('hint').classList.add('show')
         setTimeout(() => {
             img2.classList.remove('wrong-shake')
-            if (correctCount < 9) {
-                updateImages()
-            }
-            checkDigits()
-        }, 500)
+            correctCount = 0
+            resetCircles()
+            updateImages()
+            document.getElementById('hint').classList.remove('show')
+        }, 1500)
     }
 }
 
