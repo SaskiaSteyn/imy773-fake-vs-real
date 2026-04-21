@@ -336,6 +336,35 @@ function resetCircles() {
     digit2.classList.remove('revealed')
     digit3.style.visibility = 'hidden'
     digit3.classList.remove('revealed')
+
+    // Reset image buckets to original state
+    correct.length = 0
+    correct.push('./instagram/her-insta/0-beach.png')
+    correct.push('./instagram/her-insta/1-half-marathon.png')
+    correct.push('./instagram/her-insta/2-night-club.png')
+    correct.push('./instagram/her-insta/3-lunch.png')
+    correct.push('./instagram/her-insta/4-mirror-selfie.png')
+    correct.push('./instagram/her-insta/5-new-selfie.png')
+    correct.push('./instagram/her-insta/6-matcha.png')
+    correct.push('./instagram/her-insta/7-bestie.png')
+    correct.push('./instagram/her-insta/8-tennis-post.png')
+    correct.push('./instagram/her-insta/9-padel.png')
+    correct.push('./instagram/her-insta/10-flower-picking.png')
+    correct.push('./instagram/her-insta/11-new-car.png')
+
+    incorrect.length = 0
+    incorrect.push('./instagram/his-insta/0-beach.png')
+    incorrect.push('./instagram/his-insta/1-half-marathon.png')
+    incorrect.push('./instagram/his-insta/2-night-club.png')
+    incorrect.push('./instagram/his-insta/3-lunch.png')
+    incorrect.push('./instagram/his-insta/4-mirror-selfie.png')
+    incorrect.push('./instagram/his-insta/5-new-selfie.png')
+    incorrect.push('./instagram/his-insta/6-matcha.png')
+    incorrect.push('./instagram/his-insta/7-bestie.png')
+    incorrect.push('./instagram/his-insta/8-tennis-post.png')
+    incorrect.push('./instagram/his-insta/9-padel.png')
+    incorrect.push('./instagram/his-insta/10-flower-picking.png')
+    incorrect.push('./instagram/his-insta/11-new-car.png')
 }
 
 // Create click functions for each image
